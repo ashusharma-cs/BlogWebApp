@@ -5,7 +5,10 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://0.0.0.0:27017/blogDB", { useNewUrlParser: true });
+
+
+mongoose.connect("mongodb+srv://user_ashu:userashu@cluster0.3n8vcs2.mongodb.net/blogDB", 
+{ useNewUrlParser: true });
 
 
 const aboutContent = "This is a Blog Web Application built to store and compose posts. This application is developed using NodeJS, Express, Template Engine(EJS) and MongoDB. To compose a post, the user has to hit /compose on the url to visit the compose route. Once a user submits the post the data is stored in a mongoDB database. All the posts can be viewed on the home route.";
@@ -100,6 +103,6 @@ app.get("/posts/:postId", function (req, res) {
 
 
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+app.listen(4000, function () {
+  console.log("Server started on port 4000");
 });
